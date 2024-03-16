@@ -59,7 +59,7 @@ function App() {
     for (let key in isFormValid) {
       formValid &&= isFormValid[key]
     }
-    formValid ? alert("Form is valid") : alert("Invalid form, you can't submit")
+    formValid ? alert("User Signup Successfully") : alert("Invalid user details, make sure to fill all the fields correctly")
   }
 
   return (
