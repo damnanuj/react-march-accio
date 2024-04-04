@@ -1,7 +1,9 @@
-
+// MovieList.js
 import React from 'react';
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, selectedGenre }) => {
+  const filteredMovies = selectedGenre ? movies.filter(movie => movie.genre === selectedGenre) : movies;
+
   return (
     <table>
       <thead>
@@ -12,7 +14,7 @@ const MovieList = ({ movies }) => {
         </tr>
       </thead>
       <tbody>
-        {movies.map((movie, index) => (
+        {filteredMovies.map((movie, index) => (
           <tr key={index}>
             <td>{movie.title}</td>
             <td>{movie.genre}</td>

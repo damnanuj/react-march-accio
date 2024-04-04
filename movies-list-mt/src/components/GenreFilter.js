@@ -7,7 +7,8 @@ const GenreFilter = ({ genres }) => {
   };
 
   return (
-    <div>
+    <div className='genres'>
+      <h2>Filter by Genre</h2>
       {genres.map((genre, index) => (
         <button key={index} onClick={() => handleClick(genre)}>
           {genre}

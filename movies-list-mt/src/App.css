@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    
+    background-color: whitesmoke;
+}
+.ListContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    padding: 10px;
+}
+.genres{
+    background-color: #e7e7e7;
+    padding: 10px;
+    button{
+        background-color: whitesmoke;
+        padding: 5px 10px;
+       border: 1px solid black;
+       outline: none;
+       margin-right: 5px;
+       cursor: pointer;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #e7e7e7;
+    
+  }
+  
+  th, td {
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+
+  @media (max-width: 768px) {
+    th, td {
+     
+      width: 100%;
+    }
+    
+    th {
+      text-align: left;
+    }
+  }
+  

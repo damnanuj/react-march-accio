@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import React from 'react';
 import GenreFilter from './components/GenreFilter';
 import MovieList from './components/MovieList';
@@ -35,10 +36,19 @@ const genres = [
 ];
 
 const App = () => {
+  const [selectedGenre, setSelectedGenre] = useState(null);
+
+  const handleGenreSelect = (genre) => {
+    setSelectedGenre(genre);
+  };
+
   return (
-    <div>
-      <GenreFilter genres={genres} />
-      <MovieList movies={movies} />
+    <div className='main-container'>
+      <div className='ListContainer'>
+        <h1>Top 15 Movies of All Time</h1>
+        <GenreFilter genres={genres} onSelectGenre={handleGenreSelect} />
+        <MovieList movies={movies} selectedGenre={selectedGenre} />
+      </div>
     </div>
   );
 };
