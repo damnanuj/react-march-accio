@@ -35,7 +35,6 @@ function App() {
   const onFormChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-
     let isValid = false;
     if (name === "email") {
       isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
